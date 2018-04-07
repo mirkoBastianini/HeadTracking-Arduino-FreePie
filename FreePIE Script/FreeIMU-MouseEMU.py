@@ -22,7 +22,7 @@ deltaPitch = filters.delta(pitch)
 deltaRoll = filters.delta(roll)
    
 if (enabled):
-   mouse.deltaX = deltaYaw*10
+   mouse.deltaX = -deltaYaw*10
    mouse.deltaY = -deltaPitch*10
 
 toggle = keyboard.getPressed(Key.Z)
