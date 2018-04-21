@@ -39,26 +39,21 @@ if (enabled):
    mouse.deltaX = -deltaYaw*multiplier
    mouse.deltaY = -deltaPitch*multiplier
 
-#set key z,x,c
-toggle1 = keyboard.getPressed(Key.Z)
-toggle2 = keyboard.getPressed(Key.X)
-toggle3 = keyboard.getPressed(Key.C)
-
-#enable mouse movement based on sensors key=z
-if toggle1:
+#enable mouse movement based on sensors key=Lshift+z
+if keyboard.getKeyDown(Key.LeftShift) and keyboard.getPressed(Key.Z):
    multiplier = 10 #change value to adjust sensitivity default=10
    enabled = not enabled
    emulation = 0
    
-#reset position to relative center key=x
-if toggle2:
+#reset position to relative center key=Lshift+x
+if keyboard.getKeyDown(Key.LeftShift) and keyboard.getPressed(Key.X):
    mouse.deltaX = 0-rsltx
    mouse.deltaY = 0-rslty
    rsltx = 0
    rslty = 0
       
-#reset cursor position to absolute center of screen key=c
-if toggle3:
+#reset cursor position to absolute center of screen key=Lshift+c
+if keyboard.getKeyDown(Key.LeftShift) and keyboard.getPressed(Key.C):
    resox = windll.user32.GetSystemMetrics(0)
    resoy = windll.user32.GetSystemMetrics(1)
    ctypes.windll.user32.SetCursorPos(resox/2, resoy/2)
