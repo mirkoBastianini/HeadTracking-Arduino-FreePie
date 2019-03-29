@@ -1,0 +1,35 @@
+{
+  "Media": {
+    "Projection": {
+      "Type": "VrPlayer.Projections.Plane.PlaneProjection",
+      "Params": {
+        "Ratio": 1.05458639434121
+      }
+    },
+    "StereoMode": "Mono"
+  },
+  "Device": {
+    "Distortion": {
+      "Type": "VrPlayer.Distortions.Barrel.BarrelEffect",
+      "Params": {
+        "Factor": 1.5,
+        "XCenter": 0.5,
+        "YCenter": 0.5,
+        "BlueOffset": 0.0125,
+        "RedOffset": -0.0125
+      }
+    },
+    "Tracker": {
+      "Type": "VrPlayer.Trackers.MouseTracker.MouseTracker",
+      "Params": {
+        "Sensitivity": 1.0,
+        "PositionScaleFactor": 1.0,
+        "RotationOffset": "Identity"
+      }
+    },
+    "DisplayMode": "SideBySide",
+    "FieldOfView": 60,
+    "ViewportsHorizontalOffset": -30,
+    "ViewportsVerticalOffset": 0
+  }
+}
